@@ -158,7 +158,7 @@ void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat) {
             break;
         }
 
-        // Studentai rušiuojami greičiausiais metodais (taikomi tik vektoriui)
+        // Studentai apdorojami greičiausiu metodu naudojant numatytuosius algoritmus
         case 3: {
             auto iter = std::stable_partition(visiStudentai.begin(), visiStudentai.end(),
                 [](const StudentasClass &s) { return s.arIslaike(); });

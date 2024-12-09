@@ -119,6 +119,8 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const StudentasClass& s);
 };
 
+
+// Pre-v1.0, ne member metodai darbui su klase Studentas
 void inputManual(std::vector<StudentasClass> &studentai, int studSk);
 void inputManualList(std::list<StudentasClass> &studentaiList, int studSk);
 void inputScan(std::vector<StudentasClass> &studentai, std::string failoPav);
