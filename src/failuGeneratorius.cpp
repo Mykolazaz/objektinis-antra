@@ -220,14 +220,6 @@ void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat) {
     std::cout << "'Kvailų' studentų įrašų rašymas: " << uzdLaikas.elapsed() << "\n" << "\n";
 
     std::cout << "Bendras veikimo laikas be generavimo: " << bendrLaikas.elapsed() << "\n" << "\n";
-
-    // StudentasClass a;
-    // std::cin >> a;
-    // StudentasClass b;
-    // b=a;
-    // StudentasClass c(b);
-    // std::cout << a << "\n" << b << "\n" << c << std::endl;
-    // // Human h;
 }
 
 void inputSplitSort(std::string failoPav, int rusiavKateg, int useVector, int testStrat) {
