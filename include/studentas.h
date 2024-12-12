@@ -219,13 +219,54 @@ public:
     void setTarpRez(const std::vector<int>& naujiTarpRez);
     
     // Metodai
+    /**
+     * @brief Add a Single Intermediate Grade
+     * 
+     * @param rez 
+     */
     void pridetiTarpRez(int rez);
+    /**
+     * @brief Generate Random Intermediate Grades and Exam Grade
+     * 
+     * @param kiekBalu 
+     */
     void generuotiBalus(int kiekBalu = 15);
+    /**
+     * @brief Calculate the Final Grade
+     * 
+     * @param naudotiVidurki 
+     */
     void rastiGalutini(bool naudotiVidurki = true);
+    /**
+     * @brief Remove the Last Intermediate Grade and Replace the Exam Grade with It
+     * 
+     */
     void isimtiGalutini();
+    /**
+     * @brief Remove all saved data
+     * 
+     */
     void clear();
+    /**
+     * @brief Update Passing Grade Boolean islaike
+     * 
+     */
     void rastiIslaike(){ islaike_ = (galutinis_ >= 5.0); }
+    /**
+     * @brief Recheck And Return Passing Grade Boolean
+     * 
+     * @return true 
+     * @return false 
+     */
     bool arIslaike() const { return islaike_; }
+    /**
+     * @brief Compared Students Either by First Name, Last Name or Final Grade
+     * 
+     * @param b 
+     * @param criteria 
+     * @return true 
+     * @return false 
+     */
     bool compare(const StudentasClass& b, int criteria = 2);
     std::ostream& printInfo(std::ostream& os) const;
 
