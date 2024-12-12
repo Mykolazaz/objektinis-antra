@@ -126,6 +126,13 @@ public:
         islaike_ = other.islaike_;
     }
 
+    /**
+     * @brief Construct a new Studentas Class object by assigning data
+     * 
+     * @param other 
+     * @return StudentasClass& 
+     */
+
     // Copy assignment konstruktorius
     StudentasClass& operator=(const StudentasClass& other) {
         if (this != &other) {  // Apsauga nuo savęs priskyrimo
@@ -142,12 +149,47 @@ public:
     }
 
     // Get'eriai
+    /**
+     * @brief Get the First Name object
+     * 
+     * @return const std::string& 
+     */
     const std::string& getVardas() const override { return vardas_; }
+    /**
+     * @brief Get the Last Name object
+     * 
+     * @return const std::string& 
+     */
     const std::string& getPavarde() const override { return pavarde_; }
+    /**
+     * @brief Get the Intermediate Grades object
+     * 
+     * @return const std::vector<int>& 
+     */
     const std::vector<int>& getTarpRez() const { return tarpRez_; }
+    /**
+     * @brief Get the Exam Results object
+     * 
+     * @return int 
+     */
     int getEgzamRez() const { return egzamRez_; }
+    /**
+     * @brief Get the Grade Average object
+     * 
+     * @return double 
+     */
     double getVidurkis() const { return vidurkis_; }
+    /**
+     * @brief Get the Grade Median object
+     * 
+     * @return double 
+     */
     double getMediana() const { return mediana_; }
+    /**
+     * @brief Get the Final Grade object
+     * 
+     * @return double 
+     */
     double getGalutinis() const { return galutinis_; }
     
     // Set'eriai
