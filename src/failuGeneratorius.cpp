@@ -1,6 +1,11 @@
 #include "lib.h"
 #include "studentas.h"
 
+/**
+ * @brief Time tracking class for run-time measuremets
+ * 
+ */
+
 class Timer {
   private:
     using hrClock = std::chrono::high_resolution_clock;
@@ -15,6 +20,13 @@ class Timer {
       return durationDouble (hrClock::now() - start).count();
     }
 };
+
+/**
+ * @brief Non-member function for student data generation
+ * 
+ * @param studGenSk Number of students
+ * @param ndGenSk Number of homework grades
+ */
 
 void generateEntries(int studGenSk, int ndGenSk){
     std::cout << "Failo generavimas pradėtas..." << "\n";
@@ -65,6 +77,15 @@ void generateEntries(int studGenSk, int ndGenSk){
     std::cout << std::to_string(studGenSk-1) + " įrašų generavimas: " << generLaikas.elapsed() << "\n";
     std::cout << "Failo generavimas baigtas." << "\n";
 }
+
+/**
+ * @brief Non-member function for the processing of student data
+ * 
+ * @tparam Container Vector or list
+ * @param failoPav Name of file containing student data
+ * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param testStrat Sorting methodology option
+ */
 
 template <typename Container>
 void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat) {
@@ -221,6 +242,15 @@ void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat) {
 
     std::cout << "Bendras veikimo laikas be generavimo: " << bendrLaikas.elapsed() << "\n" << "\n";
 }
+
+/**
+ * @brief Intermediate function for choosing vector or list containers
+ * 
+ * @param failoPav Name of file containing student data
+ * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param useVector 
+ * @param testStrat Sorting methodology option
+ */
 
 void inputSplitSort(std::string failoPav, int rusiavKateg, int useVector, int testStrat) {
     if (useVector == 1) {

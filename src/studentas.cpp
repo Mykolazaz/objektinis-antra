@@ -2,7 +2,7 @@
 #include "studentas.h"
 
 // Class'ės Studentas metodų realizacijos
-// Privatūs pagalbiniai metodai
+// Privatūs member metodai
 void StudentasClass::rastiVid() {
     vidurkis_ = tarpRez_.empty() ? 0.0 : 
                 accumulate(tarpRez_.begin(), tarpRez_.end(), 0.0) / tarpRez_.size();
@@ -27,7 +27,7 @@ void StudentasClass::rastiRez() {
     rastiMed();
 }
 
-//Metodai
+// Vieši member metodai
 void StudentasClass::setTarpRez(const std::vector<int>& naujiTarpRez) {
     tarpRez_ = naujiTarpRez;
     rastiRez();
@@ -123,7 +123,7 @@ std::ostream& operator<<(std::ostream& os, const StudentasClass& s) {
     return s.printInfo(os);
 }
 
-// Funkcijos, dirbančios su class'ės Studentas objektas
+// Ne member metodai darbui su klase Studentas
 void inputManual(std::vector<StudentasClass> &studentai, int studSk){
     for (int i=0; i<studSk; i++){
         int arRandom;
