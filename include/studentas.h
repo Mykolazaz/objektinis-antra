@@ -168,7 +168,7 @@ public:
      */
     const std::vector<int>& getTarpRez() const { return tarpRez_; }
     /**
-     * @brief Get the Exam Results object
+     * @brief Get the Exam Grade object
      * 
      * @return int 
      */
@@ -193,9 +193,29 @@ public:
     double getGalutinis() const { return galutinis_; }
     
     // Set'eriai
+    /**
+     * @brief Set the First Name object
+     * 
+     * @param vardas 
+     */
     void setVardas(const std::string& vardas) override { vardas_ = vardas; }
+    /**
+     * @brief Set the Last Name object
+     * 
+     * @param pavarde 
+     */
     void setPavarde(const std::string& pavarde) override { pavarde_ = pavarde; }
+    /**
+     * @brief Set the Exam Grade object
+     * 
+     * @param rez 
+     */
     void setEgzamRez(int rez) { egzamRez_ = rez; rastiGalutini(); }
+    /**
+     * @brief Set the Intermediate Grades object
+     * 
+     * @param naujiTarpRez 
+     */
     void setTarpRez(const std::vector<int>& naujiTarpRez);
     
     // Metodai
