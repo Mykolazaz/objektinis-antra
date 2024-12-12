@@ -277,12 +277,64 @@ public:
 
 
 // Pre-v1.0, ne member metodai darbui su klase Studentas
+/**
+ * @brief Lets the User Manually Input Student Data into a Vector
+ * 
+ * @param studentai Vector of Students
+ * @param studSk Number of Students
+ */
 void inputManual(std::vector<StudentasClass> &studentai, int studSk);
+/**
+ * @brief Lets the User Manually Input Student Data into a List
+ * 
+ * @param studentaiList List of Students
+ * @param studSk Number of Students
+ */
 void inputManualList(std::list<StudentasClass> &studentaiList, int studSk);
+/**
+ * @brief Reads Student Data from a File
+ * 
+ * @param studentai 
+ * @param failoPav 
+ */
 void inputScan(std::vector<StudentasClass> &studentai, std::string failoPav);
+/**
+ * @brief Outputs Student Data from Manual User input and Displays the Grade Average or Median
+ * 
+ * @param Lok 
+ * @param vidMed Grade Average or Median
+ */
 void outputManual(StudentasClass Lok, int vidMed);
+/**
+ * @brief Outputs Student Data into a Summary File
+ * 
+ * @param studentai 
+ */
 void outputScan(std::vector<StudentasClass> &studentai);
+/**
+ * @brief Generates student data
+ * 
+ * @param studGenSk Number of students
+ * @param ndGenSk Number of homework grades
+ */
 void generateEntries(int studGenSk, int ndGenSk);
+/**
+ * @brief Intermediate function for choosing vector or list containers
+ * 
+ * @param failoPav Name of file containing student data
+ * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param useVector 
+ * @param testStrat Sorting methodology option
+ */
 void inputSplitSort(std::string failoPav, int rusiavKateg, int useVector, int testStrat);
+/**
+ * @brief Processes student data
+ * 
+ * @tparam Container Vector or list
+ * @param failoPav Name of file containing student data
+ * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param testStrat Sorting methodology option
+ */
+void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat);
 
 #endif
