@@ -2,7 +2,7 @@
 #include "studentas.h"
 
 /**
- * @brief Time tracking class for run-time measuremets
+ * @brief Tracks time for run-time measurements
  * 
  */
 
@@ -22,7 +22,7 @@ class Timer {
 };
 
 /**
- * @brief Non-member function for student data generation
+ * @brief Generates student data
  * 
  * @param studGenSk Number of students
  * @param ndGenSk Number of homework grades
@@ -79,7 +79,7 @@ void generateEntries(int studGenSk, int ndGenSk){
 }
 
 /**
- * @brief Non-member function for the processing of student data
+ * @brief Processes student data
  * 
  * @tparam Container Vector or list
  * @param failoPav Name of file containing student data

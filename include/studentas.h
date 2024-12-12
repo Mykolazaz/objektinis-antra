@@ -3,6 +3,11 @@
 
 #include "lib.h"
 
+/**
+ * @brief Abstract father class for StudentasClass
+ * 
+ */
+
 class Human {
 protected:
     std::string vardas_;
@@ -12,14 +17,39 @@ public:
     virtual ~Human() = 0;
 
     // Visiškai virtualūs metodai
+    /**
+     * @brief Set the First Name object
+     * 
+     * @param vardas 
+     */
     virtual void setVardas(const std::string& vardas) = 0;
+    /**
+     * @brief Set the Last Name object
+     * 
+     * @param pavarde 
+     */
     virtual void setPavarde(const std::string& pavarde) = 0;
 
+    /**
+     * @brief Get the First Name object
+     * 
+     * @return const std::string& 
+     */
     virtual const std::string& getVardas() const = 0;
+    /**
+     * @brief Get the Last Name object
+     * 
+     * @return const std::string& 
+     */
     virtual const std::string& getPavarde() const = 0;
 };
 
 inline Human::~Human() {}
+
+/**
+ * @brief Student data processing
+ * 
+ */
 
 class StudentasClass : public Human{
 private:
@@ -36,6 +66,11 @@ private:
     void rastiRez();
 
 public:
+    /**
+     * @brief Construct a new Studentas Class object
+     * 
+     */
+
     // Default konstruktorius
     StudentasClass() : 
         Human(),
@@ -45,6 +80,13 @@ public:
         galutinis_(0.0),
         islaike_(false) {}
     
+    /**
+     * @brief Construct a new Studentas Class object
+     * 
+     * @param vardas 
+     * @param pavarde 
+     */
+
     // Parametrizuotas konstruktorius
     StudentasClass(const std::string& vardas, const std::string& pavarde) : 
         Human(), 
@@ -57,9 +99,20 @@ public:
             this->setPavarde(pavarde);
         }
 
+    /**
+     * @brief Destroy the Studentas Class object
+     * 
+     */
+
     ~StudentasClass(){
         tarpRez_.clear();
     };
+
+    /**
+     * @brief Construct a new Studentas Class object by copying data
+     * 
+     * @param other 
+     */
 
     // Copy konstruktorius
     StudentasClass(const StudentasClass& other) : Human() {
