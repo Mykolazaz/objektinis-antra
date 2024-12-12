@@ -226,7 +226,7 @@ public:
      */
     void pridetiTarpRez(int rez);
     /**
-     * @brief Generate Random Intermediate Grades and Exam Grade
+     * @brief Generate random Intermediate Grades and Exam Grade
      * 
      * @param kiekBalu 
      */
@@ -238,7 +238,7 @@ public:
      */
     void rastiGalutini(bool naudotiVidurki = true);
     /**
-     * @brief Remove the Last Intermediate Grade and Replace the Exam Grade with It
+     * @brief Remove the last Intermediate Grade and replace it with Exam Grade
      * 
      */
     void isimtiGalutini();
@@ -248,19 +248,19 @@ public:
      */
     void clear();
     /**
-     * @brief Update Passing Grade Boolean islaike
+     * @brief Update Passing Grade boolean islaike
      * 
      */
     void rastiIslaike(){ islaike_ = (galutinis_ >= 5.0); }
     /**
-     * @brief Recheck And Return Passing Grade Boolean
+     * @brief Recheck and return Passing Grade boolean
      * 
      * @return true 
      * @return false 
      */
     bool arIslaike() const { return islaike_; }
     /**
-     * @brief Compared Students Either by First Name, Last Name or Final Grade
+     * @brief Compares Students either by First Name, Last Name or Final Grade
      * 
      * @param b 
      * @param criteria 
@@ -278,41 +278,41 @@ public:
 
 // Pre-v1.0, ne member metodai darbui su klase Studentas
 /**
- * @brief Lets the User Manually Input Student Data into a Vector
+ * @brief Lets the user manually input Student data into a Vector
  * 
  * @param studentai Vector of Students
  * @param studSk Number of Students
  */
 void inputManual(std::vector<StudentasClass> &studentai, int studSk);
 /**
- * @brief Lets the User Manually Input Student Data into a List
+ * @brief Lets the user manually input Student data into a List
  * 
  * @param studentaiList List of Students
  * @param studSk Number of Students
  */
 void inputManualList(std::list<StudentasClass> &studentaiList, int studSk);
 /**
- * @brief Reads Student Data from a File
+ * @brief Reads Student data from a File
  * 
  * @param studentai 
  * @param failoPav 
  */
 void inputScan(std::vector<StudentasClass> &studentai, std::string failoPav);
 /**
- * @brief Outputs Student Data from Manual User input and Displays the Grade Average or Median
+ * @brief Outputs Student data from nanual user input and displays the Grade Average or Median
  * 
  * @param Lok 
  * @param vidMed Grade Average or Median
  */
 void outputManual(StudentasClass Lok, int vidMed);
 /**
- * @brief Outputs Student Data into a Summary File
+ * @brief Outputs Student data into a summary File
  * 
  * @param studentai 
  */
 void outputScan(std::vector<StudentasClass> &studentai);
 /**
- * @brief Generates student data
+ * @brief Randomly generates Student data
  * 
  * @param studGenSk Number of students
  * @param ndGenSk Number of homework grades
@@ -321,18 +321,18 @@ void generateEntries(int studGenSk, int ndGenSk);
 /**
  * @brief Intermediate function for choosing vector or list containers
  * 
- * @param failoPav Name of file containing student data
- * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param failoPav Name of file containing Student data
+ * @param rusiavKateg Sorting by First name, Last name or Final grade
  * @param useVector 
  * @param testStrat Sorting methodology option
  */
 void inputSplitSort(std::string failoPav, int rusiavKateg, int useVector, int testStrat);
 /**
- * @brief Processes student data
+ * @brief Processes Student data
  * 
  * @tparam Container Vector or list
- * @param failoPav Name of file containing student data
- * @param rusiavKateg Sorting by first name, last name or final grade
+ * @param failoPav Name of file containing Student data
+ * @param rusiavKateg Sorting by First name, Last name or Final grade
  * @param testStrat Sorting methodology option
  */
 void inputSplitSortImpl(std::string failoPav, int rusiavKateg, int testStrat);

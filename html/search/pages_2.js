@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['programos_20naudojimo_20instrukcija_0',['Programos naudojimo instrukcija',['../md__r_e_a_d_m_e.html',1,'']]]
+];
